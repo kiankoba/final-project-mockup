@@ -60,6 +60,14 @@ userRoutes.route('/profile', {
   },
 });
 
+export const tourneysPageRouteName = 'Tourneys_Page';
+userRoutes.route('/tourneys', {
+  name: tourneysPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: tourneysPageRouteName });
+  },
+});
+
 export const filterPageRouteName = 'Filter_Page';
 userRoutes.route('/filter', {
   name: filterPageRouteName,
@@ -74,3 +82,4 @@ FlowRouter.notFound = {
     BlazeLayout.render('Page_Not_Found');
   },
 };
+
